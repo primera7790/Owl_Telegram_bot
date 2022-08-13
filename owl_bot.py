@@ -2,13 +2,24 @@ import telebot
 from telebot.types import Message
 import os
 from dotenv import load_dotenv
-import else_type
 import random
 
 load_dotenv()
 
 TOKEN = os.environ.get('O_TOKEN')
 bot = telebot.TeleBot(TOKEN)
+
+
+def else_answer(message):
+    with open('num_incorrect_request.txt') as f:
+        num_incorrect_request = f.read()
+    if int(num_incorrect_request) == 2:
+        bot.send_message(message.from_user.id, 'Это всё, конечно, занятно.. но вопрос-то поступит?)')
+        with open('num_incorrect_request.txt', 'w') as f:
+            f.write(str(0))
+    else:
+        with open('num_incorrect_request.txt', 'w') as f:
+            f.write(str(int(num_incorrect_request) + 1))
 
 
 @bot.message_handler(commands=['start', 'help'])
@@ -78,9 +89,9 @@ def echo_all(message: Message):
                 f.close()
 
         else:
-            else_type.else_type(message)
+            else_answer(message)
     else:
-        else_type.else_type(message)
+        else_answer(message)
 
 
 bot.infinity_polling()
