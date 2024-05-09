@@ -1,4 +1,12 @@
-# owl_bot.py
-An unspoken interlocutor who can support your initiative. 
-- You think so, too, don't you? 
-- Mm-hmm.
+# Совух, бот-советчик в Telegram
+..именно, что не советник)
+
+## Технологии
+  - Язык программирования: &nbsp; `python` ;
+  - Основные библиотеки: &nbsp; `pyTelegramBotAPI` .
+
+## Описание
+  
+  &nbsp; &nbsp; Сомневаешься? Спроси у бота!.<br>
+  &nbsp; &nbsp; Даёт случайный ответ на закрытый вопрос.<br>
+  &nbsp; &nbsp; Немногословный товарищ, всегда поможет советом.. это же явно интересней подброшенной монетки!
