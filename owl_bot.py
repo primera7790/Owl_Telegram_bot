@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 import random
 
-load_dotenv()
+load_dotenv('./data/env/.env')
 
 TOKEN = os.environ.get('O_TOKEN')
 bot = telebot.TeleBot(TOKEN)
