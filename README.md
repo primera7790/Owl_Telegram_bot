@@ -1,6 +1,9 @@
 # Совух, бот-советчик в Telegram
 ..именно, что не советник)
 
+## Ссылка
+https://t.me/owl_companion_bot
+
 ## Технологии
   - Язык программирования: &nbsp; `python` ;
   - Основные библиотеки: &nbsp; `pyTelegramBotAPI` .
