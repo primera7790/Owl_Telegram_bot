@@ -22,7 +22,7 @@ def else_answer(message):
             f.write(str(int(num_incorrect_request) + 1))
 
 
-@bot.message_handler(commands=['start', 'help'])
+@bot.message_handler(commands=['start'])
 def send_welcome(message):
     bot.send_message(message.from_user.id, 'Какой вопрос привёл тебя ко мне?')
 
